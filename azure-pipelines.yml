@@ -22,6 +22,7 @@ stages:
       inputs:
         command: 'build'
         projects: '**/*.csproj'
+        arguments: '--configuration Release --output $(build.artifactstagingdirectory)'
 
     - task: PublishBuildArtifacts@1
       inputs:
